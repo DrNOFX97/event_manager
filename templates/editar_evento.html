@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block title %}Editar Evento{% endblock %}
+
+{% block additional_head %}
+<style>
+    h1 {
+        text-align: center;
+        margin: 20px 0;
+        color: var(--primary-color);
+    }
+    form {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: var(--background-light);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+    }
+    label {
+        display: block;
+        margin: 15px 0 5px;
+        color: var(--text-dark);
+        font-weight: bold;
+    }
+    input[type="text"],
+    input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid var(--text-light);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+    }
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: var(--secondary-color);
+        color: var(--text-dark);
+        text-decoration: none;
+        border-radius: var(--border-radius);
+        transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+        background-color: var(--primary-color);
+    }
+    .btn-danger {
+        background-color: #e74c3c;
+    }
+    .btn-danger:hover {
+        background-color: #c0392b;
+    }
+    .form-actions {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    .form-actions a {
+        margin-right: 10px;
+    }
+    .form-actions a:last-child {
+        margin-right: 0;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<h1>Editar Evento</h1>
+
+<form method="POST">
+    <label for="nome">Nome do Evento:</label>
+    <input type="text" id="nome" name="nome" value="{{ evento.nome }}" required>
+
+    <label for="data">Data do Evento (dd/mm/aa):</label>
+    <input type="text" id="data" name="data" value="{{ evento.data.strftime('%d/%m/%y') }}" pattern="\d{2}/\d{2}/\d{2}" placeholder="dd/mm/aa" required>
+
+    <label for="duracao">Duração (minutos):</label>
+    <input type="number" id="duracao" name="duracao" value="{{ evento.duracao }}" min="30" step="30" required>
+
+    <label for="formadora">Formadora:</label>
+    <select id="formadora" name="formadora" required>
+        <option value="Ana Rita Vieira" {% if evento.formadora == 'Ana Rita Vieira' %}selected{% endif %}>Ana Rita Vieira</option>
+        <option value="Outro" {% if evento.formadora and evento.formadora != 'Ana Rita Vieira' %}selected{% endif %}>Outro</option>
+    </select>
+
+    <div class="form-actions">
+        <button type="submit" class="btn">Atualizar Evento</button>
+        <a href="{{ url_for('main.eventos') }}" class="btn btn-danger">Cancelar</a>
+    </div>
+</form>
+{% endblock %}

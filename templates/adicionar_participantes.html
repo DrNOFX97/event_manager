@@ -1,0 +1,194 @@
+
+{% extends "base.html" %}
+
+{% block title %}Adicionar Participante - {{ evento.nome }}{% endblock %}
+
+{% block additional_head %}
+<style>
+    .adicionar-participante-container {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: var(--background-light);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+    }
+    .adicionar-participante-header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .adicionar-participante-form {
+        display: flex;
+        flex-direction: column;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        color: var(--text-dark);
+        font-weight: bold;
+    }
+    .form-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid var(--text-light);
+        border-radius: var(--border-radius);
+    }
+    .btn-submit {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .btn-submit:hover {
+        background-color: var(--secondary-color);
+    }
+    .btn-cancel {
+        background-color: var(--text-light);
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: var(--border-radius);
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .form-actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .nav-tabs {
+        display: flex;
+        margin-bottom: 20px;
+        border-bottom: 1px solid var(--text-light);
+    }
+    .nav-tabs button {
+        flex: 1;
+        padding: 10px;
+        background-color: var(--background-light);
+        border: none;
+        border-bottom: 2px solid transparent;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .nav-tabs button.active {
+        border-bottom-color: var(--primary-color);
+        font-weight: bold;
+    }
+    .tab-content {
+        display: none;
+    }
+    .tab-content.active {
+        display: block;
+    }
+    .form-group-select {
+        margin-bottom: 15px;
+    }
+    .form-group-select select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid var(--text-light);
+        border-radius: var(--border-radius);
+    }
+    .file-upload-group {
+        display: flex;
+        align-items: center;
+    }
+    .file-upload-group input[type="file"] {
+        flex-grow: 1;
+        margin-right: 10px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="adicionar-participante-container">
+    <div class="adicionar-participante-header">
+        <h1>Adicionar Participante</h1>
+        <p>Evento: {{ evento.nome }}</p>
+    </div>
+
+    <div class="nav-tabs">
+        <button class="active" onclick="switchTab('manual')">Inserção Manual</button>
+        <button onclick="switchTab('lista')">A partir da Lista</button>
+        <button onclick="switchTab('ficheiro')">Importar Ficheiro</button>
+    </div>
+
+    <div id="manual-tab" class="tab-content active">
+        <form method="POST" class="adicionar-participante-form">
+            <div class="form-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" required placeholder="Digite o nome do participante">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Digite o email do participante">
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-submit">Adicionar Participante</button>
+                <a href="{{ url_for('main.detalhe_evento', id=evento.id) }}" class="btn-cancel">Cancelar</a>
+            </div>
+        </form>
+    </div>
+
+    <div id="lista-tab" class="tab-content">
+        <form method="POST" class="adicionar-participante-form">
+            <div class="form-group-select">
+                <label for="utilizadores">Selecionar Utilizadores</label>
+                <select id="utilizadores" name="utilizadores" multiple>
+                    {% for utilizador in utilizadores %}
+                    <option value="{{ utilizador.id }}"><strong>{{ utilizador.nome_completo }}</strong> ({{ utilizador.email }})</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" name="action" value="adicionar_lista" class="btn-submit">Adicionar Selecionados</button>
+                <a href="{{ url_for('main.detalhe_evento', id=evento.id) }}" class="btn-cancel">Cancelar</a>
+            </div>
+        </form>
+    </div>
+
+    <div id="ficheiro-tab" class="tab-content">
+        <form method="POST" enctype="multipart/form-data" class="adicionar-participante-form">
+            <div class="file-upload-group">
+                <input type="file" id="ficheiro" name="ficheiro" accept=".csv,.xlsx,.xls" required>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" name="action" value="importar_ficheiro" class="btn-submit">Importar Participantes</button>
+                <a href="{{ url_for('main.detalhe_evento', id=evento.id) }}" class="btn-cancel">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+function switchTab(tabName) {
+    // Hide all tabs
+    document.getElementById('manual-tab').classList.remove('active');
+    document.getElementById('lista-tab').classList.remove('active');
+    document.getElementById('ficheiro-tab').classList.remove('active');
+
+    // Remove active class from all buttons
+    const buttons = document.querySelectorAll('.nav-tabs button');
+    buttons.forEach(button => button.classList.remove('active'));
+
+    // Show selected tab
+    document.getElementById(tabName + '-tab').classList.add('active');
+    
+    // Activate corresponding button
+    event.target.classList.add('active');
+}
+</script>
+{% endblock %}

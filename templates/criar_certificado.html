@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+
+{% block title %}Criar Certificado{% endblock %}
+
+{% block additional_head %}
+<style>
+    .certificado-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: var(--background-light);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        color: var(--text-dark);
+    }
+    .form-group input, 
+    .form-group select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid var(--text-light);
+        border-radius: var(--border-radius);
+        background-color: #f9f9f9;
+    }
+    .form-group input[readonly] {
+        background-color: #e9ecef;
+        cursor: not-allowed;
+    }
+    .certificado-options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .bulk-certificate-option {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .btn-primary {
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .btn-primary:hover {
+        background-color: #45a049;
+    }
+    .certificado-exemplo {
+        border: 2px solid var(--primary-color);
+        border-radius: 10px;
+        padding: 20px;
+        margin-top: 20px;
+        background-color: #f9f9f9;
+        text-align: center;
+        position: relative;
+    }
+    .certificado-exemplo::before {
+        content: 'Exemplo de Certificado';
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: white;
+        padding: 0 10px;
+        font-size: 0.8em;
+        color: var(--primary-color);
+    }
+    .certificado-exemplo h3 {
+        color: var(--primary-color);
+        margin-bottom: 15px;
+    }
+    .certificado-exemplo .certificado-detalhes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        text-align: left;
+    }
+    .certificado-exemplo .certificado-detalhes p {
+        margin: 5px 0;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="certificado-container">
+    <h2>Criar Certificado para Evento: {{ evento.nome }}</h2>
+    
+    <form method="POST" action="{{ url_for('main.criar_certificado', evento_id=evento.id) }}" id="certificadoForm">
+        <div class="form-group">
+            <label for="participante">Participante (opcional se gerar para todos)</label>
+            <select id="participante" name="participante">
+                <option value="">Selecione um Participante</option>
+                {% for participante in participantes %}
+                <option value="{{ participante.id }}" 
+                        {% if participante.certificado_gerado %}disabled{% endif %}>
+                    {{ participante.nome }} 
+                    {% if participante.certificado_gerado %}(Certificado Gerado){% endif %}
+                </option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Data do Evento</label>
+            <input type="text" value="{{ evento.data.strftime('%d/%m/%Y') }}" readonly>
+        </div>
+
+        <div class="form-group">
+            <label>Carga Horária</label>
+            <input type="text" value="{{ evento.duracao }} horas" readonly>
+        </div>
+
+        <div class="certificado-options">
+            <div class="bulk-certificate-option">
+                <input type="checkbox" id="certificar_todos" name="certificar_todos" value="1">
+                <label for="certificar_todos">Gerar Certificados para Todos os Participantes</label>
+            </div>
+
+            <div>
+                <button type="submit" class="btn-primary">Gerar Certificado</button>
+            </div>
+        </div>
+    </form>
+
+    <div class="certificado-exemplo">
+        <h3>Certificado de Participação</h3>
+        <div class="certificado-detalhes">
+            <p><strong>Evento:</strong> {{ evento.nome }}</p>
+            <p><strong>Data:</strong> {{ evento.data.strftime('%d/%m/%Y') }}</p>
+            <p><strong>Carga Horária:</strong> {{ evento.duracao }} horas</p>
+            <p><strong>Participante:</strong> João Silva</p>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById('certificar_todos').addEventListener('change', function() {
+    const participanteSelect = document.getElementById('participante');
+    participanteSelect.disabled = this.checked;
+    if (this.checked) {
+        participanteSelect.selectedIndex = 0;
+    }
+});
+</script>
+{% endblock %}

@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block title %}Gestão de Eventos{% endblock %}
+
+{% block additional_head %}
+<style>
+    h1 {
+        text-align: center;
+        margin: 20px 0;
+        color: var(--primary-color);
+    }
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: var(--secondary-color);
+        color: var(--text-dark);
+        text-decoration: none;
+        border-radius: var(--border-radius);
+        transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+        background-color: var(--secondary-color);
+    }
+    .btn-danger {
+        background-color: #e74c3c;
+    }
+    .btn-danger:hover {
+        background-color: #c0392b;
+    }
+    .eventos-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
+    .evento-card {
+        background-color: #fefabc;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        padding: 20px;
+        transition: transform 0.3s ease;
+    }
+    .evento-card:hover {
+        transform: translateY(-10px);
+    }
+    .evento-card h2 {
+        margin-top: 0;
+        color: var(--primary-color);
+    }
+    .evento-card p {
+        margin: 10px 0;
+    }
+    .card-actions {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .btn-certificate {
+        background-color: #4CAF50;  /* Green color */
+        color: white;
+        padding: 8px 12px;
+        border-radius: 4px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .btn-certificate:hover {
+        background-color: #45a049;
+    }
+    .evento-actions {
+        display: flex;
+        gap: 10px;
+    }
+    .btn-edit {
+        background-color: var(--secondary-color);
+        color: var(--text-dark);
+    }
+    .btn-delete {
+        background-color: #e74c3c;
+        color: white;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1><strong>Eventos</strong></h1>
+
+    <a href="{{ url_for('main.criar_evento') }}" class="btn">Criar Novo Evento</a>
+
+    <div class="eventos-grid">
+        {% for evento in eventos %}
+        <div class="evento-card">
+            <h2><strong>{{ evento.nome }}</strong></h2>
+            <p><strong>Data:</strong> {{ evento.data.strftime('%d/%m/%Y') }}</p>
+            <p><strong>Duração:</strong> {{ evento.duracao }} minutos</p>
+            {% if evento.formadora is defined and evento.formadora %}
+                <p><strong>Formadora:</strong> {{ evento.formadora }}</p>
+            {% else %}
+                <p><strong>Formadora:</strong> Não definida</p>
+            {% endif %}
+            
+            <div class="card-actions">
+                <a href="{{ url_for('main.detalhe_evento', id=evento.id) }}" class="btn btn-info">Detalhes</a>
+                <a href="{{ url_for('main.editar_evento', id=evento.id) }}" class="btn btn-edit">Editar</a>
+                <form method="POST" action="{{ url_for('main.apagar_evento', id=evento.id) }}" style="display:inline;">
+                    <button type="submit" class="btn btn-delete" onclick="return confirm('Tem certeza que deseja apagar este evento?')">Apagar</button>
+                </form>
+                <a href="{{ url_for('main.criar_certificado', evento_id=evento.id) }}" class="btn btn-certificate">
+                    <i class="fas fa-certificate"></i> Certificados
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,238 @@
+{% extends "base.html" %}
+
+{% block title %}Gestor de Eventos - Início{% endblock %}
+
+{% block head %}
+<style>
+    :root {
+        --primary-color: #3498db;
+        --secondary-color: #2ecc71;
+        --gradient-primary: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+        --gradient-secondary: linear-gradient(135deg, #ff6a00 0%, #ee0979 100%);
+        --text-dark: #2c3e50;
+        --text-light: #34495e;
+        --background-light: linear-gradient(135deg, #f6f8f9 0%, #e5ebee 100%);
+    }
+
+    .landing-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 50px 20px;
+        background: var(--background-light);
+        min-height: calc(100vh - 120px);
+        justify-content: center;
+    }
+
+    .landing-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .landing-title {
+        color: var(--text-dark);
+        font-size: 3em;
+        font-weight: 800;
+        background: var(--gradient-primary);
+        /* -webkit-background-clip: text; */
+        /* -webkit-text-fill-color: transparent; */
+        margin-right: 20px;
+        transition: all 0.3s ease;
+    }
+
+    .landing-logo {
+        width: 80px;
+        height: 80px;
+        background: var(--gradient-primary);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 2.5em;
+        box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
+        transition: all 0.5s ease;
+        transform-style: preserve-3d;
+    }
+
+    .landing-logo:hover {
+        transform: 
+            rotate3d(1, 1, 0, 360deg) 
+            scale(1.1);
+        box-shadow: 0 15px 30px rgba(52, 152, 219, 0.5);
+    }
+
+    .landing-description {
+        color: var(--text-light);
+        max-width: 700px;
+        line-height: 1.8;
+        margin-bottom: 40px;
+        font-size: 1.1em;
+        opacity: 0.8;
+    }
+
+    .feature-grid {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    .feature-card {
+        flex: 1;
+        min-width: 300px;
+        max-width: 400px;
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        transition: all 0.4s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .feature-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+            45deg, 
+            rgba(52, 152, 219, 0.1), 
+            rgba(46, 204, 113, 0.1)
+        );
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 1;
+    }
+
+    .feature-card:hover::before {
+        opacity: 1;
+    }
+
+    .feature-icon {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        background: var(--gradient-primary);
+        box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
+        transition: all 0.3s ease;
+        z-index: 2;
+        position: relative;
+    }
+
+    .feature-icon img {
+    max-width: 60%;
+    max-height: 60%;
+    transition: transform 0.3s ease;
+    filter: invert(42%) sepia(93%) saturate(2313%) hue-rotate(250deg);
+}
+
+
+    .feature-card:hover .feature-icon {
+        transform: 
+            scale(1.1) 
+            rotate3d(1, 1, 0, 15deg);
+        box-shadow: 0 15px 30px rgba(52, 152, 219, 0.4);
+    }
+
+    .feature-card:hover .feature-icon img {
+        transform: scale(1.2);
+    }
+
+    .feature-title {
+        font-size: 1.5em;
+        color: var(--text-dark);
+        margin-bottom: 15px;
+        transition: color 0.3s ease;
+    }
+
+    .feature-description {
+        color: var(--text-light);
+        margin-bottom: 20px;
+        line-height: 1.6;
+        opacity: 0.8;
+    }
+
+    .feature-btn {
+        display: inline-block;
+        padding: 12px 25px;
+        background: var(--gradient-primary);
+        color: black;
+        text-decoration: none;
+        border-radius: 30px;
+        transition: all 0.3s ease;
+        position: relative;
+        z-index: 3;
+    }
+
+    .feature-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
+    }
+
+    @media (max-width: 768px) {
+        .feature-grid {
+            flex-direction: column;
+            align-items: center;
+        }
+        .feature-card {
+            width: 90%;
+            max-width: 350px;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="landing-container">
+    <div class="landing-header">
+        <h1 class="landing-title">Gestor de Eventos</h1>
+        <div class="landing-logo">📅</div>
+    </div>
+    
+    <p class="landing-description">
+        O Gestor de Eventos é um software de gestão de eventos que permite criar, organizar e gerir eventos de forma simples e intuitiva. 
+        Com ele, pode criar eventos, gerir participantes, enviar convites e muito mais.
+    </p>
+    
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="feature-icon">
+                <img src="{{ url_for('static', filename='icons/events-icon.svg') }}" alt="Eventos Icon">
+            </div>
+            <h2 class="feature-title">Eventos</h2>
+            <p class="feature-description">
+                Gira os seus eventos com facilidade. Crie, visualize e organize seus eventos de forma rápida e inteligente.
+            </p>
+            <a href="{{ url_for('main.eventos') }}" class="feature-btn">Explorar Eventos</a>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">
+                <img src="{{ url_for('static', filename='icons/users-icon.svg') }}" alt="Utilizadores Icon">
+            </div>
+            <h2 class="feature-title">Utilizadores</h2>
+            <p class="feature-description">
+                Controlo total sobre os utilizadores. Organize e mantenha o seu registo atualizado.
+            </p>
+            <a href="{{ url_for('main.utilizadores') }}" class="feature-btn">Gerir Utilizadores</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

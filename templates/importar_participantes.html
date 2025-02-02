@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+
+{% block title %}Importar Participantes - {{ evento.nome }}{% endblock %}
+
+{% block head %}
+<style>
+    .import-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background: white;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+    }
+    .file-upload {
+        border: 2px dashed var(--primary-color);
+        border-radius: var(--border-radius);
+        padding: 20px;
+        text-align: center;
+        transition: background-color 0.3s ease;
+    }
+    .file-upload-input {
+        display: none;
+    }
+    .file-upload-label {
+        display: inline-block;
+        padding: 10px 20px;
+        background: var(--gradient-primary);
+        color: white;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+    .file-upload-label:hover {
+        transform: scale(1.05);
+    }
+    .results-section {
+        margin-top: 20px;
+        background-color: #f4f4f4;
+        padding: 15px;
+        border-radius: 8px;
+    }
+    .adicionados {
+        color: green;
+    }
+    .rejeitados {
+        color: red;
+    }
+    .btn-primary {
+        background-color: var(--primary-color);
+        color: var(--text-light);
+        border: none;
+        border-radius: var(--border-radius);
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .btn-primary:hover {
+        background-color: var(--secondary-color);
+    }
+    .mt-3 {
+        margin-top: 15px;
+    }
+    .mt-2 {
+        margin-top: 10px;
+    }
+    .text-muted {
+        color: var(--text-light);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="import-container">
+        <h2>Importar Participantes para {{ evento.nome }}</h2>
+
+        <form method="POST" enctype="multipart/form-data">
+            <div class="file-upload">
+                <input
+                    type="file"
+                    name="file"
+                    id="file-upload"
+                    class="file-upload-input"
+                    accept=".csv,.xlsx,.xls,.ods,.txt,.json,.html"
+                >
+                <label for="file-upload" class="file-upload-label">
+                    Selecionar Ficheiro
+                </label>
+                <p class="mt-2 text-muted">
+                    Formatos suportados: CSV, Excel, JSON, HTML
+                    <br>
+                    Colunas necessárias: nome, email
+                </p>
+            </div>
+            <button type="button" class="btn btn-primary mt-3" onclick="document.getElementById('file-upload').click()">
+                Importar Participantes
+            </button>
+        </form>
+
+        {% if session.get('importacao_resultado') %}
+        <div class="results-section">
+            <h3>Resultado da Importação</h3>
+
+            <div class="summary">
+                <p>
+                    <strong>Total Processados:</strong>
+                    {{ session['importacao_resultado']['total_processados'] }}
+                </p>
+            </div>
+
+            <div class="adicionados">
+                <h4>
+                    Participantes Adicionados
+                    ({{ session['importacao_resultado']['adicionados']|length }})
+                </h4>
+                <ul>
+                    {% for participante in session['importacao_resultado']['adicionados'] %}
+                    <li>{{ participante.nome }} ({{ participante.email }})</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="rejeitados">
+                <h4>
+                    Participantes Rejeitados
+                    ({{ session['importacao_resultado']['rejeitados']|length }})
+                </h4>
+                <ul>
+                    {% for participante in session['importacao_resultado']['rejeitados'] %}
+                    <li>
+                        {{ participante.nome }} ({{ participante.email }})
+                        - {{ participante.motivo }}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const fileInput = document.getElementById('file-upload');
+    const label = document.querySelector('.file-upload-label');
+
+    fileInput.addEventListener('change', function() {
+        if (this.files && this.files.length > 0) {
+            label.textContent = this.files[0].name;
+        }
+    });
+});
+</script>
+{% endblock %}

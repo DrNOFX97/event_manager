@@ -1,0 +1,343 @@
+{% extends "base.html" %}
+
+{% block title %}Participantes{% endblock %}
+
+{% block additional_head %}
+<style>
+    h3 {
+        text-align: center;
+        margin: 20px 0;
+        color: var(--primary-color);
+    }
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        box-shadow: var(--box-shadow);
+        border-radius: var(--border-radius);
+        overflow: hidden;
+    }
+    th, td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid var(--text-light);
+    }
+    th {
+        background-color: var(--primary-color);
+        color: var(--text-light);
+    }
+    tr:nth-child(even) {
+        background-color: var(--background-light);
+    }
+    tr:hover {
+        background-color: #f0f0f0;
+    }
+    .acoes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .acoes a {
+        display: inline-block;
+        text-align: center;
+        white-space: nowrap;
+    }
+    .status-select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 100%;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #212529;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        text-align-last: center; /* Alinha o texto do dropdown ao centro */
+    }
+    .status-select.btn-pendente {
+        background-color: #6c757d;
+        color: white;
+    }
+    .status-select.btn-confirmado {
+        background-color: #4CAF50;
+        color: white;
+    }
+    .status-select.btn-presente {
+        background-color: #2196F3;
+        color: white;
+    }
+    .status-select.btn-cancelado {
+        background-color: #f44336;
+        color: white;
+    }
+    .status-wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 150px; /* Set a max-width to prevent overly wide dropdowns */
+        margin: 0 auto; /* Center the dropdown */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left; /* Alinha o conteúdo à esquerda */
+    }
+    .bulk-actions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        gap: 10px;
+    }
+    .bulk-actions form {
+        margin: 0;
+    }
+    .bulk-btn {
+        padding: 10px 15px;
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .bulk-btn:hover {
+        background-color: var(--secondary-color);
+    }
+    .btn-certificado {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .btn-certificado:hover {
+        background-color: #45a049;
+    }
+    .btn-presente {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .btn-presente:hover {
+        background-color: #45a049;
+    }
+    .btn-confirmado {
+        background-color: hsl(87, 100%, 50%);
+        color: black;
+        padding: 10px 15px;
+        border: none;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .btn-confirmado:hover {
+        background-color: #45a049;
+    }
+    .btn-cancelado {
+        background-color: red;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .btn-cancelado:hover {
+        background-color: #a04545;
+    }
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script type="text/javascript">
+// GUARANTEED SCRIPT EXECUTION
+(function() {
+    // Immediate logging to multiple channels
+    function multiChannelLog(message) {
+        // Browser console
+        console.log(' ' + message);
+        console.warn(' ' + message);
+        console.error(' ' + message);
+
+        // Visual logging
+        try {
+            var logDiv = document.createElement('div');
+            logDiv.style.position = 'fixed';
+            logDiv.style.top = '0';
+            logDiv.style.left = '0';
+            logDiv.style.width = '100%';
+            logDiv.style.backgroundColor = 'red';
+            logDiv.style.color = 'white';
+            logDiv.style.zIndex = '9999';
+            logDiv.style.padding = '10px';
+            logDiv.style.fontWeight = 'bold';
+            logDiv.innerHTML = ' ' + message;
+            document.body.insertAdjacentElement('afterbegin', logDiv);
+        } catch(e) {}
+    }
+
+    // Guaranteed execution marker
+    multiChannelLog('SCRIPT ABSOLUTELY EXECUTED: ' + new Date().toLocaleString());
+
+    // Multiple event binding strategies
+    function bindDropdownEvents() {
+        try {
+            var statusSelects = document.querySelectorAll('.status-select');
+            multiChannelLog('DROPDOWNS FOUND: ' + statusSelects.length);
+
+            statusSelects.forEach(function(select, index) {
+                // Multiple event binding strategies
+                ['change', 'input', 'click'].forEach(function(eventType) {
+                    select.addEventListener(eventType, function(event) {
+                        multiChannelLog('DROPDOWN EVENT: ' + eventType + 
+                            ' Index: ' + index + 
+                            ' Value: ' + this.value +
+                            ' ParticipanteID: ' + this.dataset.participanteId
+                        );
+
+                        // Force alert for visibility
+                        try {
+                            alert('DROPDOWN INTERACTION: ' + this.value);
+                        } catch(e) {}
+
+                        // Automatically submit the form
+                        this.closest('form').submit();
+                    });
+                });
+            });
+        } catch(e) {
+            multiChannelLog('DROPDOWN BINDING ERROR: ' + e.message);
+        }
+    }
+
+    // Multiple load event strategies
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', bindDropdownEvents);
+    } else {
+        bindDropdownEvents();
+    }
+
+    window.addEventListener('load', bindDropdownEvents);
+
+    // Global error tracking
+    window.addEventListener('error', function(event) {
+        multiChannelLog('GLOBAL ERROR: ' + event.message);
+    });
+})();
+</script>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h3>Detalhes do Evento: {{ evento.nome }}</h3>
+    
+    <!-- Bulk Status Change Actions -->
+    <div class="bulk-actions">
+        <form method="POST" action="{{ url_for('main.alterar_status_evento', evento_id=evento.id) }}">
+            <button type="submit" name="action" value="todos_pendentes" class="bulk-btn">Todos Pendentes</button>
+        </form>
+        <form method="POST" action="{{ url_for('main.alterar_status_evento', evento_id=evento.id) }}">
+            <button type="submit" name="action" value="todos_confirmados" class="bulk-btn">Todos Confirmados</button>
+        </form>
+        <form method="POST" action="{{ url_for('main.alterar_status_evento', evento_id=evento.id) }}">
+            <button type="submit" name="action" value="todos_cancelados" class="bulk-btn">Todos Cancelados</button>
+        </form>
+        <form method="POST" action="{{ url_for('main.alterar_status_evento', evento_id=evento.id) }}">
+            <button type="submit" name="action" value="todos_presentes" class="bulk-btn">Todos Presentes</button>
+        </form>
+    </div>
+    
+    <!-- Bulk Certificate Email Button -->
+    {% if participantes|selectattr('status', 'equalto', 'presente')|list|length > 0 %}
+    <div class="bulk-actions">
+        <form method="POST" action="{{ url_for('main.enviar_certificados_evento', evento_id=evento.id) }}">
+            <button type="submit" class="btn btn-certificado">
+                Enviar Certificados para Todos os Presentes ({{ 
+                    participantes|selectattr('status', 'equalto', 'presente')|list|length 
+                }})
+            </button>
+        </form>
+    </div>
+    {% endif %}
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Status</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for participante in participantes %}
+            <tr>
+                <td>{{ participante.nome }}</td>
+                <td>{{ participante.email }}</td>
+                <td>
+                    <div class="status-wrapper" style="text-align: left;">
+                        <form method="POST" action="{{ url_for('main.alterar_status_participante', participante_id=participante.id) }}" class="status-form">
+                            <select 
+                                id="status-{{ participante.id }}"
+                                class="status-select 
+                                {% if participante.status == 'pendente' %}btn-pendente{% endif %}
+                                {% if participante.status == 'confirmado' %}btn-confirmado{% endif %}
+                                {% if participante.status == 'presente' %}btn-presente{% endif %}
+                                {% if participante.status == 'cancelado' %}btn-cancelado{% endif %}"
+                                data-participante-id="{{ participante.id }}"
+                                name="status"
+                            >
+                                <option value="pendente" {% if participante.status == 'pendente' or not participante.status %}selected{% endif %}>Pendente</option>
+                                <option value="confirmado" {% if participante.status == 'confirmado' %}selected{% endif %}>Confirmado</option>
+                                <option value="presente" {% if participante.status == 'presente' %}selected{% endif %}>Presente</option>
+                                <option value="cancelado" {% if participante.status == 'cancelado' %}selected{% endif %}>Cancelado</option>
+                            </select>
+                        </form>
+                    </div>
+                </td>
+                <td>
+                    <div class="acoes">
+                        {% if participante.status == 'presente' %}
+                        <form method="POST" action="{{ url_for('main.enviar_certificado_email', participante_id=participante.id) }}" style="display:inline;">
+                            <button type="submit" class="btn btn-certificado {% if participante.certificado_enviado %}btn-success{% endif %}">
+                                {% if participante.certificado_enviado %}
+                                    Certificado Enviado ✓
+                                {% else %}
+                                    Enviar Certificado
+                                {% endif %}
+                            </button>
+                        </form>
+                        {% endif %}
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="acoes">
+        <a href="{{ url_for('main.adicionar_participantes', evento_id=evento.id) }}" class="btn btn-certificado">Adicionar Participantes</a>
+        <a href="{{ url_for('main.criar_certificado', evento_id=evento.id) }}" class="btn btn-certificado">Gerar Certificados</a>
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.status-select').forEach(function(select) {
+        select.addEventListener('change', function() {
+            this.closest('form').submit();
+        });
+    });
+</script>
+{% endblock %}

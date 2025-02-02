@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+
+{% block title %}Criar Evento{% endblock %}
+
+{% block additional_head %}
+<style>
+    h1 {
+        text-align: center;
+        margin: 20px 0;
+        color: var(--primary-color);
+    }
+    form {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: var(--background-light);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+    }
+    label {
+        display: block;
+        margin: 15px 0 5px;
+        color: var(--text-dark);
+        font-weight: bold;
+    }
+    input[type="text"],
+    input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid var(--text-light);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+    }
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: var(--secondary-color);
+        color: var(--text-dark);
+        text-decoration: none;
+        border-radius: var(--border-radius);
+        transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+        background-color: var(--primary-color);
+    }
+    .btn-danger {
+        background-color: #e74c3c;
+    }
+    .btn-danger:hover {
+        background-color: #c0392b;
+    }
+    .form-actions {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    .form-actions a {
+        margin-right: 10px;
+    }
+    .form-actions a:last-child {
+        margin-right: 0;
+    }
+    .criar-evento-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: var(--background-light);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+    }
+    .criar-evento-header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .criar-evento-form {
+        padding: 20px;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    .btn-submit {
+        background-color: var(--secondary-color);
+        color: var(--text-dark);
+        padding: 10px 20px;
+        border: none;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+    }
+    .btn-cancel {
+        background-color: #e74c3c;
+        color: var(--text-dark);
+        padding: 10px 20px;
+        border: none;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+    }
+    .btn-cancel:hover {
+        background-color: #c0392b;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="criar-evento-container">
+    <div class="criar-evento-header">
+        <h1>Criar Novo Evento</h1>
+    </div>
+
+    <form method="POST" class="criar-evento-form">
+        <div class="form-group">
+            <label for="nome">Nome do Evento</label>
+            <input type="text" id="nome" name="nome" required placeholder="Digite o nome do evento">
+        </div>
+
+        <div class="form-group">
+            <label for="data">Data do Evento</label>
+            <input type="text" id="data" name="data" required placeholder="DD/MM/AA" pattern="\d{2}/\d{2}/\d{2}">
+        </div>
+
+        <div class="form-group">
+            <label for="duracao">Duração (minutos):</label>
+            <input type="number" id="duracao" name="duracao" min="30" step="30" required>
+        </div>
+
+        <div class="form-group">
+            <label for="formadora">Formadora:</label>
+            <select id="formadora" name="formadora" required>
+                <option value="Ana Rita Vieira" selected>Ana Rita Vieira</option>
+                <option value="Outro">Outro</option>
+            </select>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn">Criar Evento</button>
+            <a href="{{ url_for('main.eventos') }}" class="btn btn-danger">Cancelar</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,535 @@
+2025-01-29 15:23:24,571 - __main__ - INFO - Database tables created successfully
+2025-01-29 15:23:24,615 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-29 15:23:24,615 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 15:23:24,616 - werkzeug - INFO -  * Restarting with stat
+2025-01-29 15:23:25,198 - __main__ - INFO - Database tables created successfully
+2025-01-29 15:23:25,217 - werkzeug - WARNING -  * Debugger is active!
+2025-01-29 15:23:25,230 - werkzeug - INFO -  * Debugger PIN: 130-560-646
+2025-01-29 15:23:28,764 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:23:28] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-29 15:23:28,778 - routes - INFO - Fetched 5 eventos from the database
+2025-01-29 15:23:28,778 - routes - INFO - Event: Evento de Exemplo, Date: 2025-01-29, Duration: 2
+2025-01-29 15:23:28,779 - routes - INFO - Event: Fernando Nuno C. B. Vieira, Date: 2025-02-01, Duration: 30
+2025-01-29 15:23:28,779 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 15:23:28,779 - routes - INFO - Event: Fernando Nuno C. B. Vieira, Date: 2025-02-04, Duration: 30
+2025-01-29 15:23:28,779 - routes - INFO - Event: Fernando Nuno C. B. Vieira, Date: 2025-02-04, Duration: 30
+2025-01-29 15:23:28,800 - routes - ERROR - Error listing eventos: Could not build url for endpoint 'main.editar_evento' with values ['id']. Did you mean 'main.criar_evento' instead?
+2025-01-29 15:23:28,802 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:23:28] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 15:23:33,835 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:23:33] "GET /criar_evento HTTP/1.1" 200 -
+2025-01-29 15:23:39,895 - routes - INFO - Attempting to create event: Fernando Nuno C. B. Vieira, Date: 2025-02-04, Duration: 30
+2025-01-29 15:23:39,898 - routes - INFO - Event created successfully: Fernando Nuno C. B. Vieira
+2025-01-29 15:23:39,899 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:23:39] "[32mPOST /criar_evento HTTP/1.1[0m" 302 -
+2025-01-29 15:23:39,903 - routes - INFO - Fetched 6 eventos from the database
+2025-01-29 15:23:39,903 - routes - INFO - Event: Evento de Exemplo, Date: 2025-01-29, Duration: 2
+2025-01-29 15:23:39,903 - routes - INFO - Event: Fernando Nuno C. B. Vieira, Date: 2025-02-01, Duration: 30
+2025-01-29 15:23:39,904 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 15:23:39,904 - routes - INFO - Event: Fernando Nuno C. B. Vieira, Date: 2025-02-04, Duration: 30
+2025-01-29 15:23:39,904 - routes - INFO - Event: Fernando Nuno C. B. Vieira, Date: 2025-02-04, Duration: 30
+2025-01-29 15:23:39,904 - routes - INFO - Event: Fernando Nuno C. B. Vieira, Date: 2025-02-04, Duration: 30
+2025-01-29 15:23:39,904 - routes - ERROR - Error listing eventos: Could not build url for endpoint 'main.editar_evento' with values ['id']. Did you mean 'main.criar_evento' instead?
+2025-01-29 15:23:39,905 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:23:39] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 15:24:45,361 - werkzeug - INFO -  * Detected change in '/Users/f.nuno/IronHack/AI_Engineering_Bootcamp/event_manager/event_manager/routes.py', reloading
+2025-01-29 15:24:46,218 - werkzeug - INFO -  * Restarting with stat
+2025-01-29 15:24:47,417 - __main__ - INFO - Database tables created successfully
+2025-01-29 15:24:47,441 - werkzeug - WARNING -  * Debugger is active!
+2025-01-29 15:24:47,453 - werkzeug - INFO -  * Debugger PIN: 130-560-646
+2025-01-29 15:25:31,020 - werkzeug - INFO -  * Detected change in '/Users/f.nuno/IronHack/AI_Engineering_Bootcamp/event_manager/event_manager/routes.py', reloading
+2025-01-29 15:25:31,199 - werkzeug - INFO -  * Restarting with stat
+2025-01-29 15:25:33,056 - __main__ - INFO - Database tables created successfully
+2025-01-29 15:25:33,107 - werkzeug - WARNING -  * Debugger is active!
+2025-01-29 15:25:33,144 - werkzeug - INFO -  * Debugger PIN: 130-560-646
+2025-01-29 15:25:53,926 - __main__ - INFO - Database tables created successfully
+2025-01-29 15:25:53,963 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-29 15:25:53,964 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 15:25:53,965 - werkzeug - INFO -  * Restarting with stat
+2025-01-29 15:25:54,641 - __main__ - INFO - Database tables created successfully
+2025-01-29 15:25:54,662 - werkzeug - WARNING -  * Debugger is active!
+2025-01-29 15:25:54,678 - werkzeug - INFO -  * Debugger PIN: 130-560-646
+2025-01-29 15:25:57,795 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:25:57] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-29 15:25:57,805 - routes - INFO - Fetched 6 eventos from the database
+2025-01-29 15:25:57,806 - routes - INFO - Event: Evento de Exemplo, Date: 2025-01-29, Duration: 2
+2025-01-29 15:25:57,806 - routes - INFO - Event: Fernando Nuno C. B. Vieira, Date: 2025-02-01, Duration: 30
+2025-01-29 15:25:57,806 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 15:25:57,806 - routes - INFO - Event: Fernando Nuno C. B. Vieira, Date: 2025-02-04, Duration: 30
+2025-01-29 15:25:57,806 - routes - INFO - Event: Fernando Nuno C. B. Vieira, Date: 2025-02-04, Duration: 30
+2025-01-29 15:25:57,806 - routes - INFO - Event: Fernando Nuno C. B. Vieira, Date: 2025-02-04, Duration: 30
+2025-01-29 15:25:57,833 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:25:57] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 15:26:06,794 - routes - INFO - Attempting to delete event: Evento de Exemplo
+2025-01-29 15:26:06,800 - routes - INFO - Event deleted successfully: Evento de Exemplo
+2025-01-29 15:26:06,802 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:26:06] "[32mPOST /apagar_evento/1 HTTP/1.1[0m" 302 -
+2025-01-29 15:26:06,805 - routes - INFO - Fetched 5 eventos from the database
+2025-01-29 15:26:06,805 - routes - INFO - Event: Fernando Nuno C. B. Vieira, Date: 2025-02-01, Duration: 30
+2025-01-29 15:26:06,805 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 15:26:06,805 - routes - INFO - Event: Fernando Nuno C. B. Vieira, Date: 2025-02-04, Duration: 30
+2025-01-29 15:26:06,805 - routes - INFO - Event: Fernando Nuno C. B. Vieira, Date: 2025-02-04, Duration: 30
+2025-01-29 15:26:06,805 - routes - INFO - Event: Fernando Nuno C. B. Vieira, Date: 2025-02-04, Duration: 30
+2025-01-29 15:26:06,806 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:26:06] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 15:26:09,287 - routes - INFO - Attempting to delete event: Fernando Nuno C. B. Vieira
+2025-01-29 15:26:09,290 - routes - INFO - Event deleted successfully: Fernando Nuno C. B. Vieira
+2025-01-29 15:26:09,292 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:26:09] "[32mPOST /apagar_evento/2 HTTP/1.1[0m" 302 -
+2025-01-29 15:26:09,296 - routes - INFO - Fetched 4 eventos from the database
+2025-01-29 15:26:09,296 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 15:26:09,296 - routes - INFO - Event: Fernando Nuno C. B. Vieira, Date: 2025-02-04, Duration: 30
+2025-01-29 15:26:09,296 - routes - INFO - Event: Fernando Nuno C. B. Vieira, Date: 2025-02-04, Duration: 30
+2025-01-29 15:26:09,296 - routes - INFO - Event: Fernando Nuno C. B. Vieira, Date: 2025-02-04, Duration: 30
+2025-01-29 15:26:09,297 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:26:09] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 15:26:12,471 - routes - INFO - Attempting to delete event: Fernando Nuno C. B. Vieira
+2025-01-29 15:26:12,475 - routes - INFO - Event deleted successfully: Fernando Nuno C. B. Vieira
+2025-01-29 15:26:12,476 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:26:12] "[32mPOST /apagar_evento/4 HTTP/1.1[0m" 302 -
+2025-01-29 15:26:12,480 - routes - INFO - Fetched 3 eventos from the database
+2025-01-29 15:26:12,480 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 15:26:12,480 - routes - INFO - Event: Fernando Nuno C. B. Vieira, Date: 2025-02-04, Duration: 30
+2025-01-29 15:26:12,480 - routes - INFO - Event: Fernando Nuno C. B. Vieira, Date: 2025-02-04, Duration: 30
+2025-01-29 15:26:12,480 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:26:12] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 15:26:14,911 - routes - INFO - Attempting to delete event: Fernando Nuno C. B. Vieira
+2025-01-29 15:26:14,914 - routes - INFO - Event deleted successfully: Fernando Nuno C. B. Vieira
+2025-01-29 15:26:14,915 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:26:14] "[32mPOST /apagar_evento/5 HTTP/1.1[0m" 302 -
+2025-01-29 15:26:14,920 - routes - INFO - Fetched 2 eventos from the database
+2025-01-29 15:26:14,920 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 15:26:14,920 - routes - INFO - Event: Fernando Nuno C. B. Vieira, Date: 2025-02-04, Duration: 30
+2025-01-29 15:26:14,920 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:26:14] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 15:26:18,795 - routes - INFO - Attempting to delete event: Fernando Nuno C. B. Vieira
+2025-01-29 15:26:18,797 - routes - INFO - Event deleted successfully: Fernando Nuno C. B. Vieira
+2025-01-29 15:26:18,798 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:26:18] "[32mPOST /apagar_evento/6 HTTP/1.1[0m" 302 -
+2025-01-29 15:26:18,801 - routes - INFO - Fetched 1 eventos from the database
+2025-01-29 15:26:18,801 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 15:26:18,802 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:26:18] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 15:26:19,947 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:26:19] "GET /editar_evento/3 HTTP/1.1" 200 -
+2025-01-29 15:26:21,900 - routes - INFO - Fetched 1 eventos from the database
+2025-01-29 15:26:21,900 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 15:26:21,901 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:26:21] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 15:26:23,051 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:26:23] "[35m[1mGET /detalhe_evento/3 HTTP/1.1[0m" 500 -
+2025-01-29 15:26:23,073 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:26:23] "GET /detalhe_evento/3?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-01-29 15:26:23,073 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:26:23] "GET /detalhe_evento/3?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-01-29 15:26:23,091 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:26:23] "GET /detalhe_evento/3?__debugger__=yes&cmd=resource&f=console.png&s=ZqbNl1SsBZsfhwOY4sn7 HTTP/1.1" 200 -
+2025-01-29 15:26:23,306 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:26:23] "GET /detalhe_evento/3?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-01-29 15:27:09,703 - werkzeug - INFO -  * Detected change in '/Users/f.nuno/IronHack/AI_Engineering_Bootcamp/event_manager/event_manager/routes.py', reloading
+2025-01-29 15:27:09,853 - werkzeug - INFO -  * Restarting with stat
+2025-01-29 15:27:11,856 - __main__ - INFO - Database tables created successfully
+2025-01-29 15:27:11,890 - werkzeug - WARNING -  * Debugger is active!
+2025-01-29 15:27:11,916 - werkzeug - INFO -  * Debugger PIN: 130-560-646
+2025-01-29 15:28:01,566 - werkzeug - INFO -  * Detected change in '/Users/f.nuno/IronHack/AI_Engineering_Bootcamp/event_manager/event_manager/routes.py', reloading
+2025-01-29 15:28:01,699 - werkzeug - INFO -  * Restarting with stat
+2025-01-29 15:28:03,255 - __main__ - INFO - Database tables created successfully
+2025-01-29 15:28:03,281 - werkzeug - WARNING -  * Debugger is active!
+2025-01-29 15:28:03,294 - werkzeug - INFO -  * Debugger PIN: 130-560-646
+2025-01-29 15:28:26,925 - __main__ - INFO - Database tables created successfully
+2025-01-29 15:28:26,959 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-29 15:28:26,959 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 15:28:26,960 - werkzeug - INFO -  * Restarting with stat
+2025-01-29 15:28:27,528 - __main__ - INFO - Database tables created successfully
+2025-01-29 15:28:27,552 - werkzeug - WARNING -  * Debugger is active!
+2025-01-29 15:28:27,564 - werkzeug - INFO -  * Debugger PIN: 130-560-646
+2025-01-29 15:28:30,705 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:28:30] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-29 15:28:30,716 - routes - INFO - Fetched 1 eventos from the database
+2025-01-29 15:28:30,716 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 15:28:30,735 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:28:30] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 15:28:33,120 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:28:33] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 15:28:35,478 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:28:35] "GET /adicionar_participantes/3 HTTP/1.1" 200 -
+2025-01-29 15:28:39,110 - routes - ERROR - Unexpected error in adicionar_participantes: 'Evento' object has no attribute 'participantes'
+2025-01-29 15:28:39,111 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:28:39] "[32mPOST /adicionar_participantes/3 HTTP/1.1[0m" 302 -
+2025-01-29 15:28:39,116 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:28:39] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 15:28:45,103 - routes - INFO - Fetched 1 eventos from the database
+2025-01-29 15:28:45,103 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 15:28:45,104 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:28:45] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 15:28:49,007 - routes - INFO - Fetched 1 utilizadores from the database
+2025-01-29 15:28:49,007 - routes - INFO - User: Fernando Nuno C. B. Vieira, Email: f.nuno.ss@gmail.com
+2025-01-29 15:28:49,015 - routes - ERROR - Error listing utilizadores: Could not build url for endpoint 'main.editar_utilizador' with values ['id']. Did you mean 'main.adicionar_utilizador' instead?
+2025-01-29 15:28:49,016 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:28:49] "GET /utilizadores HTTP/1.1" 200 -
+2025-01-29 15:28:56,716 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:28:56] "GET /adicionar_utilizador HTTP/1.1" 200 -
+2025-01-29 15:29:50,484 - routes - INFO - Fetched 1 utilizadores from the database
+2025-01-29 15:29:50,484 - routes - INFO - User: Fernando Nuno C. B. Vieira, Email: f.nuno.ss@gmail.com
+2025-01-29 15:29:50,490 - routes - ERROR - Error listing utilizadores: Could not build url for endpoint 'main.editar_utilizador' with values ['id']. Did you mean 'main.adicionar_utilizador' instead?
+2025-01-29 15:29:50,494 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:29:50] "GET /utilizadores HTTP/1.1" 200 -
+2025-01-29 15:33:18,241 - werkzeug - INFO -  * Detected change in '/Users/f.nuno/IronHack/AI_Engineering_Bootcamp/event_manager/event_manager/routes.py', reloading
+2025-01-29 15:33:18,609 - werkzeug - INFO -  * Restarting with stat
+2025-01-29 15:33:19,926 - __main__ - INFO - Database tables created successfully
+2025-01-29 15:33:19,965 - werkzeug - WARNING -  * Debugger is active!
+2025-01-29 15:33:19,997 - werkzeug - INFO -  * Debugger PIN: 130-560-646
+2025-01-29 15:33:49,092 - __main__ - INFO - Database tables created successfully
+2025-01-29 15:33:49,132 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-29 15:33:49,132 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 15:33:49,133 - werkzeug - INFO -  * Restarting with stat
+2025-01-29 15:33:49,733 - __main__ - INFO - Database tables created successfully
+2025-01-29 15:33:49,754 - werkzeug - WARNING -  * Debugger is active!
+2025-01-29 15:33:49,771 - werkzeug - INFO -  * Debugger PIN: 130-560-646
+2025-01-29 15:33:52,760 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:33:52] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-29 15:33:52,773 - routes - INFO - Fetched 1 eventos from the database
+2025-01-29 15:33:52,773 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 15:33:52,791 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:33:52] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 15:33:58,402 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:33:58] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-29 15:33:58,414 - routes - INFO - Fetched 1 eventos from the database
+2025-01-29 15:33:58,414 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 15:33:58,415 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:33:58] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 15:34:01,498 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:34:01] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-29 15:34:01,504 - routes - INFO - Fetched 1 eventos from the database
+2025-01-29 15:34:01,505 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 15:34:01,505 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:34:01] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 15:34:02,541 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:34:02] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-29 15:34:02,546 - routes - INFO - Fetched 1 eventos from the database
+2025-01-29 15:34:02,546 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 15:34:02,547 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:34:02] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 15:34:04,391 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:34:04] "[32mGET / HTTP/1.1[0m" 302 -
+2025-01-29 15:34:04,396 - routes - INFO - Fetched 1 eventos from the database
+2025-01-29 15:34:04,396 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 15:34:04,396 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:34:04] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 15:34:07,323 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:34:07] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 15:34:08,927 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:34:08] "GET /adicionar_participantes/3 HTTP/1.1" 200 -
+2025-01-29 15:34:12,157 - routes - ERROR - Unexpected error in adicionar_participantes: 'Evento' object has no attribute 'participantes'
+2025-01-29 15:34:12,158 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:34:12] "[32mPOST /adicionar_participantes/3 HTTP/1.1[0m" 302 -
+2025-01-29 15:34:12,162 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:34:12] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 15:37:03,649 - werkzeug - INFO -  * Detected change in '/Users/f.nuno/IronHack/AI_Engineering_Bootcamp/event_manager/event_manager/routes.py', reloading
+2025-01-29 15:37:03,951 - werkzeug - INFO -  * Restarting with stat
+2025-01-29 15:37:05,972 - __main__ - INFO - Database tables created successfully
+2025-01-29 15:37:06,017 - werkzeug - WARNING -  * Debugger is active!
+2025-01-29 15:37:06,040 - werkzeug - INFO -  * Debugger PIN: 130-560-646
+2025-01-29 15:37:32,360 - werkzeug - INFO -  * Detected change in '/Users/f.nuno/IronHack/AI_Engineering_Bootcamp/event_manager/event_manager/routes.py', reloading
+2025-01-29 15:37:32,560 - werkzeug - INFO -  * Restarting with stat
+2025-01-29 15:37:34,110 - __main__ - INFO - Database tables created successfully
+2025-01-29 15:37:34,139 - werkzeug - WARNING -  * Debugger is active!
+2025-01-29 15:37:34,158 - werkzeug - INFO -  * Debugger PIN: 130-560-646
+2025-01-29 15:37:57,474 - werkzeug - INFO -  * Detected change in '/Users/f.nuno/IronHack/AI_Engineering_Bootcamp/event_manager/event_manager/routes.py', reloading
+2025-01-29 15:37:57,988 - werkzeug - INFO -  * Restarting with stat
+2025-01-29 15:37:59,316 - __main__ - INFO - Database tables created successfully
+2025-01-29 15:37:59,344 - werkzeug - WARNING -  * Debugger is active!
+2025-01-29 15:37:59,366 - werkzeug - INFO -  * Debugger PIN: 130-560-646
+2025-01-29 15:39:11,922 - __main__ - INFO - Database tables created successfully
+2025-01-29 15:39:11,959 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-29 15:39:11,959 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 15:39:11,961 - werkzeug - INFO -  * Restarting with stat
+2025-01-29 15:39:12,520 - __main__ - INFO - Database tables created successfully
+2025-01-29 15:39:12,541 - werkzeug - WARNING -  * Debugger is active!
+2025-01-29 15:39:12,557 - werkzeug - INFO -  * Debugger PIN: 130-560-646
+2025-01-29 15:39:15,429 - routes - INFO - Fetched 1 eventos for landing page
+2025-01-29 15:39:15,460 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:39:15] "GET / HTTP/1.1" 200 -
+2025-01-29 15:39:15,510 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:39:15] "[36mGET /static/icons/users-icon.svg HTTP/1.1[0m" 304 -
+2025-01-29 15:39:15,513 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:39:15] "[36mGET /static/icons/events-icon.svg HTTP/1.1[0m" 304 -
+2025-01-29 15:39:17,962 - routes - INFO - Fetched 1 eventos from the database
+2025-01-29 15:39:17,963 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 15:39:17,970 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:39:17] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 15:39:20,867 - routes - INFO - Fetched 1 utilizadores from the database
+2025-01-29 15:39:20,926 - routes - INFO - User: Fernando Nuno C. B. Vieira, Email: f.nuno.ss@gmail.com
+2025-01-29 15:39:20,933 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:39:20] "GET /utilizadores HTTP/1.1" 200 -
+2025-01-29 15:39:25,585 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:39:25] "GET /editar_utilizador/1 HTTP/1.1" 200 -
+2025-01-29 15:39:31,195 - routes - INFO - Fetched 1 utilizadores from the database
+2025-01-29 15:39:31,195 - routes - INFO - User: Fernando Nuno C. B. Vieira, Email: f.nuno.ss@gmail.com
+2025-01-29 15:39:31,195 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:39:31] "GET /utilizadores HTTP/1.1" 200 -
+2025-01-29 15:41:20,959 - routes - INFO - Fetched 1 utilizadores from the database
+2025-01-29 15:41:20,959 - routes - INFO - User: Fernando Nuno C. B. Vieira, Email: f.nuno.ss@gmail.com
+2025-01-29 15:41:20,964 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:41:20] "GET /utilizadores HTTP/1.1" 200 -
+2025-01-29 15:41:49,957 - routes - INFO - Fetched 1 eventos from the database
+2025-01-29 15:41:49,957 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 15:41:49,958 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:41:49] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 15:41:51,706 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:41:51] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 15:41:52,777 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:41:52] "GET /adicionar_participantes/3 HTTP/1.1" 200 -
+2025-01-29 15:42:25,904 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:42:25] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 15:42:29,348 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:42:29] "GET /adicionar_participantes/3 HTTP/1.1" 200 -
+2025-01-29 15:42:33,988 - routes - ERROR - Unexpected error in adicionar_participantes: 'Evento' object has no attribute 'participantes'
+2025-01-29 15:42:33,990 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:42:33] "[32mPOST /adicionar_participantes/3 HTTP/1.1[0m" 302 -
+2025-01-29 15:42:33,996 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:42:33] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 15:42:37,405 - routes - INFO - Fetched 1 utilizadores from the database
+2025-01-29 15:42:37,405 - routes - INFO - User: Fernando Nuno C. B. Vieira, Email: f.nuno.ss@gmail.com
+2025-01-29 15:42:37,406 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:42:37] "GET /utilizadores HTTP/1.1" 200 -
+2025-01-29 15:42:45,594 - routes - INFO - Fetched 1 eventos from the database
+2025-01-29 15:42:45,594 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 15:42:45,595 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:42:45] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 15:42:49,518 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:42:49] "GET /criar_certificado/3 HTTP/1.1" 200 -
+2025-01-29 15:43:04,540 - routes - INFO - Fetched 1 eventos for landing page
+2025-01-29 15:43:04,540 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:43:04] "GET / HTTP/1.1" 200 -
+2025-01-29 15:43:04,559 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:43:04] "[36mGET /static/icons/events-icon.svg HTTP/1.1[0m" 304 -
+2025-01-29 15:43:04,559 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:43:04] "[36mGET /static/icons/users-icon.svg HTTP/1.1[0m" 304 -
+2025-01-29 15:43:07,444 - routes - INFO - Fetched 1 utilizadores from the database
+2025-01-29 15:43:07,444 - routes - INFO - User: Fernando Nuno C. B. Vieira, Email: f.nuno.ss@gmail.com
+2025-01-29 15:43:07,445 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:43:07] "GET /utilizadores HTTP/1.1" 200 -
+2025-01-29 15:43:13,477 - routes - INFO - Fetched 1 eventos for landing page
+2025-01-29 15:43:13,477 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:43:13] "GET / HTTP/1.1" 200 -
+2025-01-29 15:43:13,490 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:43:13] "[36mGET /static/icons/events-icon.svg HTTP/1.1[0m" 304 -
+2025-01-29 15:43:13,490 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:43:13] "[36mGET /static/icons/users-icon.svg HTTP/1.1[0m" 304 -
+2025-01-29 15:43:15,284 - routes - INFO - Fetched 1 eventos from the database
+2025-01-29 15:43:15,284 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 15:43:15,285 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:43:15] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 15:43:18,673 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:43:18] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 15:43:21,667 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 15:43:21] "GET /adicionar_participantes/3 HTTP/1.1" 200 -
+2025-01-29 15:48:20,354 - __main__ - INFO - Database tables created successfully
+2025-01-29 15:48:20,392 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-29 15:48:20,392 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 15:48:20,393 - werkzeug - INFO -  * Restarting with stat
+2025-01-29 15:48:20,994 - __main__ - INFO - Database tables created successfully
+2025-01-29 15:48:21,013 - werkzeug - WARNING -  * Debugger is active!
+2025-01-29 15:48:21,028 - werkzeug - INFO -  * Debugger PIN: 130-560-646
+2025-01-29 21:33:52,477 - __main__ - INFO - Database tables created successfully
+2025-01-29 21:33:52,592 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-29 21:33:52,592 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 21:33:52,594 - werkzeug - INFO -  * Restarting with stat
+2025-01-29 21:33:53,393 - __main__ - INFO - Database tables created successfully
+2025-01-29 21:33:53,419 - werkzeug - WARNING -  * Debugger is active!
+2025-01-29 21:33:53,437 - werkzeug - INFO -  * Debugger PIN: 327-914-831
+2025-01-29 21:33:57,768 - routes - INFO - Fetched 1 eventos for landing page
+2025-01-29 21:33:57,796 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:33:57] "GET / HTTP/1.1" 200 -
+2025-01-29 21:33:57,890 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:33:57] "[36mGET /static/icons/events-icon.svg HTTP/1.1[0m" 304 -
+2025-01-29 21:33:57,901 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:33:57] "[36mGET /static/icons/users-icon.svg HTTP/1.1[0m" 304 -
+2025-01-29 21:33:59,327 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:33:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-29 21:34:01,675 - routes - INFO - Fetched 1 eventos from the database
+2025-01-29 21:34:01,675 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 21:34:01,683 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:34:01] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 21:34:03,269 - routes - INFO - Fetched 1 utilizadores from the database
+2025-01-29 21:34:03,269 - routes - INFO - User: Fernando Nuno C. B. Vieira, Email: f.nuno.ss@gmail.com
+2025-01-29 21:34:03,274 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:34:03] "GET /utilizadores HTTP/1.1" 200 -
+2025-01-29 21:34:08,705 - routes - INFO - Fetched 1 eventos from the database
+2025-01-29 21:34:08,706 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 21:34:08,706 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:34:08] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 21:34:23,494 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:34:23] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 21:34:31,900 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:34:31] "GET /adicionar_participantes/3 HTTP/1.1" 200 -
+2025-01-29 21:34:48,903 - routes - ERROR - Unexpected error in adicionar_participantes: 'Evento' object has no attribute 'participantes'
+2025-01-29 21:34:48,905 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:34:48] "[32mPOST /adicionar_participantes/3 HTTP/1.1[0m" 302 -
+2025-01-29 21:34:48,910 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:34:48] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 21:34:55,391 - routes - INFO - Fetched 1 utilizadores from the database
+2025-01-29 21:34:55,391 - routes - INFO - User: Fernando Nuno C. B. Vieira, Email: f.nuno.ss@gmail.com
+2025-01-29 21:34:55,392 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:34:55] "GET /utilizadores HTTP/1.1" 200 -
+2025-01-29 21:44:48,696 - __main__ - INFO - Database tables created successfully
+2025-01-29 21:44:48,748 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-29 21:44:48,749 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 21:44:48,749 - werkzeug - INFO -  * Restarting with stat
+2025-01-29 21:44:49,320 - __main__ - INFO - Database tables created successfully
+2025-01-29 21:44:49,338 - werkzeug - WARNING -  * Debugger is active!
+2025-01-29 21:44:49,351 - werkzeug - INFO -  * Debugger PIN: 327-914-831
+2025-01-29 21:44:57,662 - routes - INFO - Fetched 1 eventos for landing page
+2025-01-29 21:44:57,722 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:44:57] "GET / HTTP/1.1" 200 -
+2025-01-29 21:44:58,245 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:44:58] "[36mGET /static/icons/events-icon.svg HTTP/1.1[0m" 304 -
+2025-01-29 21:44:58,258 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:44:58] "[36mGET /static/icons/users-icon.svg HTTP/1.1[0m" 304 -
+2025-01-29 21:45:00,249 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:45:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-29 21:45:01,546 - routes - INFO - Fetched 1 eventos from the database
+2025-01-29 21:45:01,546 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 21:45:01,553 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:45:01] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 21:45:03,437 - routes - INFO - Fetched 1 utilizadores from the database
+2025-01-29 21:45:03,437 - routes - INFO - User: Fernando Nuno C. B. Vieira, Email: f.nuno.ss@gmail.com
+2025-01-29 21:45:03,442 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:45:03] "GET /utilizadores HTTP/1.1" 200 -
+2025-01-29 21:45:05,401 - routes - INFO - Fetched 1 eventos from the database
+2025-01-29 21:45:05,401 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 21:45:05,402 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:45:05] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 21:45:07,913 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:45:07] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 21:45:09,324 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:45:09] "GET /adicionar_participantes/3 HTTP/1.1" 200 -
+2025-01-29 21:49:18,812 - routes - INFO - Fetched 1 eventos from the database
+2025-01-29 21:49:18,813 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 21:49:18,813 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:49:18] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 21:49:20,139 - routes - INFO - Fetched 1 utilizadores from the database
+2025-01-29 21:49:20,140 - routes - INFO - User: Fernando Nuno C. B. Vieira, Email: f.nuno.ss@gmail.com
+2025-01-29 21:49:20,140 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:49:20] "GET /utilizadores HTTP/1.1" 200 -
+2025-01-29 21:49:22,252 - routes - INFO - Fetched 1 eventos from the database
+2025-01-29 21:49:22,252 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 21:49:22,253 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:49:22] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 21:49:23,502 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:49:23] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 21:49:24,528 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:49:24] "GET /adicionar_participantes/3 HTTP/1.1" 200 -
+2025-01-29 21:52:00,720 - routes - INFO - Fetched 1 eventos for landing page
+2025-01-29 21:52:00,722 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:52:00] "GET / HTTP/1.1" 200 -
+2025-01-29 21:52:00,741 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:52:00] "[36mGET /static/icons/events-icon.svg HTTP/1.1[0m" 304 -
+2025-01-29 21:52:00,742 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:52:00] "[36mGET /static/icons/users-icon.svg HTTP/1.1[0m" 304 -
+2025-01-29 21:52:02,422 - routes - INFO - Fetched 1 eventos from the database
+2025-01-29 21:52:02,422 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 21:52:02,423 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:52:02] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 21:52:03,674 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:52:03] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 21:52:04,872 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:52:04] "GET /adicionar_participantes/3 HTTP/1.1" 200 -
+2025-01-29 21:52:09,279 - routes - INFO - Fetched 1 eventos from the database
+2025-01-29 21:52:09,279 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 21:52:09,280 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:52:09] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 21:52:13,678 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:52:13] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 21:52:16,127 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:52:16] "GET /adicionar_participantes/3 HTTP/1.1" 200 -
+2025-01-29 21:52:19,101 - routes - ERROR - Unexpected error in adicionar_participantes: 'Evento' object has no attribute 'participantes'
+2025-01-29 21:52:19,103 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:52:19] "[32mPOST /adicionar_participantes/3 HTTP/1.1[0m" 302 -
+2025-01-29 21:52:19,108 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:52:19] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 21:52:40,552 - __main__ - INFO - Database tables created successfully
+2025-01-29 21:52:40,580 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-29 21:52:40,581 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 21:52:40,581 - werkzeug - INFO -  * Restarting with stat
+2025-01-29 21:52:41,181 - __main__ - INFO - Database tables created successfully
+2025-01-29 21:52:41,202 - werkzeug - WARNING -  * Debugger is active!
+2025-01-29 21:52:41,216 - werkzeug - INFO -  * Debugger PIN: 327-914-831
+2025-01-29 21:52:45,523 - routes - INFO - Fetched 1 eventos for landing page
+2025-01-29 21:52:45,544 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:52:45] "GET / HTTP/1.1" 200 -
+2025-01-29 21:52:45,570 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:52:45] "[36mGET /static/icons/events-icon.svg HTTP/1.1[0m" 304 -
+2025-01-29 21:52:45,571 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:52:45] "[36mGET /static/icons/users-icon.svg HTTP/1.1[0m" 304 -
+2025-01-29 21:52:47,229 - routes - INFO - Fetched 1 eventos from the database
+2025-01-29 21:52:47,230 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 21:52:47,237 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:52:47] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 21:52:49,120 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:52:49] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 21:52:50,006 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:52:50] "GET /adicionar_participantes/3 HTTP/1.1" 200 -
+2025-01-29 21:53:07,873 - routes - ERROR - Unexpected error in adicionar_participantes: 'Evento' object has no attribute 'participantes'
+2025-01-29 21:53:07,874 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:53:07] "[32mPOST /adicionar_participantes/3 HTTP/1.1[0m" 302 -
+2025-01-29 21:53:07,879 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:53:07] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 21:56:32,574 - werkzeug - INFO -  * Detected change in '/Users/f.nuno/IronHack/AI_Engineering_Bootcamp/event_manager/event_manager/models.py', reloading
+2025-01-29 21:56:33,129 - werkzeug - INFO -  * Restarting with stat
+2025-01-29 21:56:34,359 - __main__ - INFO - Database tables created successfully
+2025-01-29 21:56:34,382 - werkzeug - WARNING -  * Debugger is active!
+2025-01-29 21:56:34,396 - werkzeug - INFO -  * Debugger PIN: 327-914-831
+2025-01-29 21:56:43,532 - werkzeug - INFO -  * Detected change in '/Users/f.nuno/IronHack/AI_Engineering_Bootcamp/event_manager/event_manager/routes.py', reloading
+2025-01-29 21:56:44,250 - werkzeug - INFO -  * Restarting with stat
+2025-01-29 21:56:45,987 - __main__ - INFO - Database tables created successfully
+2025-01-29 21:56:46,026 - werkzeug - WARNING -  * Debugger is active!
+2025-01-29 21:56:46,047 - werkzeug - INFO -  * Debugger PIN: 327-914-831
+2025-01-29 21:57:09,255 - __main__ - INFO - Database tables created successfully
+2025-01-29 21:57:09,284 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-29 21:57:09,285 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 21:57:09,285 - werkzeug - INFO -  * Restarting with stat
+2025-01-29 21:57:09,898 - __main__ - INFO - Database tables created successfully
+2025-01-29 21:57:09,921 - werkzeug - WARNING -  * Debugger is active!
+2025-01-29 21:57:09,933 - werkzeug - INFO -  * Debugger PIN: 327-914-831
+2025-01-29 21:57:12,616 - routes - INFO - Fetched 1 eventos for landing page
+2025-01-29 21:57:12,641 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:57:12] "GET / HTTP/1.1" 200 -
+2025-01-29 21:57:12,668 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:57:12] "[36mGET /static/icons/events-icon.svg HTTP/1.1[0m" 304 -
+2025-01-29 21:57:12,671 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:57:12] "[36mGET /static/icons/users-icon.svg HTTP/1.1[0m" 304 -
+2025-01-29 21:57:15,750 - routes - INFO - Fetched 1 eventos from the database
+2025-01-29 21:57:15,750 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 21:57:15,758 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:57:15] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 21:57:17,762 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:57:17] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 21:57:19,536 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:57:19] "GET /adicionar_participantes/3 HTTP/1.1" 200 -
+2025-01-29 21:57:30,795 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:57:30] "[32mPOST /adicionar_participantes/3 HTTP/1.1[0m" 302 -
+2025-01-29 21:57:30,811 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:57:30] "[35m[1mGET /detalhe_evento/3 HTTP/1.1[0m" 500 -
+2025-01-29 21:57:30,833 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:57:30] "[36mGET /detalhe_evento/3?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-29 21:57:30,834 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:57:30] "[36mGET /detalhe_evento/3?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-29 21:57:30,850 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:57:30] "GET /detalhe_evento/3?__debugger__=yes&cmd=resource&f=console.png&s=aV4IHZETRsi0MKuyGzkk HTTP/1.1" 200 -
+2025-01-29 21:57:31,077 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 21:57:31] "[36mGET /detalhe_evento/3?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-01-29 22:04:23,493 - werkzeug - INFO -  * Detected change in '/Users/f.nuno/IronHack/AI_Engineering_Bootcamp/event_manager/event_manager/routes.py', reloading
+2025-01-29 22:04:23,771 - werkzeug - INFO -  * Restarting with stat
+2025-01-29 22:04:25,382 - __main__ - INFO - Database tables created successfully
+2025-01-29 22:04:25,419 - werkzeug - WARNING -  * Debugger is active!
+2025-01-29 22:04:25,438 - werkzeug - INFO -  * Debugger PIN: 327-914-831
+2025-01-29 22:04:33,048 - __main__ - INFO - Database tables created successfully
+2025-01-29 22:04:33,090 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-29 22:04:33,090 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-01-29 22:04:33,091 - werkzeug - INFO -  * Restarting with stat
+2025-01-29 22:04:33,828 - __main__ - INFO - Database tables created successfully
+2025-01-29 22:04:33,850 - werkzeug - WARNING -  * Debugger is active!
+2025-01-29 22:04:33,864 - werkzeug - INFO -  * Debugger PIN: 327-914-831
+2025-01-29 22:04:36,883 - routes - INFO - Fetched 1 eventos for landing page
+2025-01-29 22:04:36,907 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:04:36] "GET / HTTP/1.1" 200 -
+2025-01-29 22:04:36,937 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:04:36] "[36mGET /static/icons/events-icon.svg HTTP/1.1[0m" 304 -
+2025-01-29 22:04:36,938 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:04:36] "[36mGET /static/icons/users-icon.svg HTTP/1.1[0m" 304 -
+2025-01-29 22:04:39,127 - routes - INFO - Fetched 1 eventos from the database
+2025-01-29 22:04:39,127 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 22:04:39,134 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:04:39] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 22:04:41,009 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:04:41] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 22:04:50,459 - routes - INFO - Fetched 1 utilizadores from the database
+2025-01-29 22:04:50,459 - routes - INFO - User: Fernando Nuno C. B. Vieira, Email: f.nuno.ss@gmail.com
+2025-01-29 22:04:50,464 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:04:50] "GET /utilizadores HTTP/1.1" 200 -
+2025-01-29 22:04:52,600 - routes - INFO - Fetched 1 eventos from the database
+2025-01-29 22:04:52,600 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 22:04:52,601 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:04:52] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 22:04:55,111 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:04:55] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 22:05:09,682 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:05:09] "[32mPOST /alterar_status_participante/1 HTTP/1.1[0m" 302 -
+2025-01-29 22:05:09,686 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:05:09] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 22:05:12,450 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:05:12] "[32mPOST /alterar_status_participante/1 HTTP/1.1[0m" 302 -
+2025-01-29 22:05:12,460 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:05:12] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 22:05:15,218 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:05:15] "[32mPOST /alterar_status_participante/1 HTTP/1.1[0m" 302 -
+2025-01-29 22:05:15,227 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:05:15] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 22:05:18,443 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:05:18] "[32mPOST /alterar_status_participante/1 HTTP/1.1[0m" 302 -
+2025-01-29 22:05:18,447 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:05:18] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 22:08:33,747 - routes - INFO - Fetched 1 eventos from the database
+2025-01-29 22:08:33,747 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 22:08:33,748 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:08:33] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 22:08:35,284 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:08:35] "GET /criar_certificado/3 HTTP/1.1" 200 -
+2025-01-29 22:08:41,849 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:08:41] "POST /criar_certificado/3 HTTP/1.1" 200 -
+2025-01-29 22:09:23,837 - routes - INFO - Fetched 1 eventos for landing page
+2025-01-29 22:09:23,837 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:09:23] "GET / HTTP/1.1" 200 -
+2025-01-29 22:09:23,855 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:09:23] "[36mGET /static/icons/events-icon.svg HTTP/1.1[0m" 304 -
+2025-01-29 22:09:23,856 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:09:23] "[36mGET /static/icons/users-icon.svg HTTP/1.1[0m" 304 -
+2025-01-29 22:09:26,654 - routes - INFO - Fetched 1 eventos from the database
+2025-01-29 22:09:26,654 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 22:09:26,655 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:09:26] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 22:09:31,625 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:09:31] "GET /editar_evento/3 HTTP/1.1" 200 -
+2025-01-29 22:09:34,486 - routes - INFO - Fetched 1 eventos from the database
+2025-01-29 22:09:34,486 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 22:09:34,487 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:09:34] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 22:47:32,968 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:47:32] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 22:47:40,456 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:47:40] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 22:50:38,566 - werkzeug - INFO -  * Detected change in '/Users/f.nuno/IronHack/AI_Engineering_Bootcamp/event_manager/event_manager/routes.py', reloading
+2025-01-29 22:50:39,088 - werkzeug - INFO -  * Restarting with stat
+2025-01-29 22:50:40,943 - __main__ - INFO - Database tables created successfully
+2025-01-29 22:50:41,000 - werkzeug - WARNING -  * Debugger is active!
+2025-01-29 22:50:41,034 - werkzeug - INFO -  * Debugger PIN: 327-914-831
+2025-01-29 22:51:10,869 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:51:10] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 22:51:18,967 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:51:18] "[32mPOST /alterar_status_evento/3 HTTP/1.1[0m" 302 -
+2025-01-29 22:51:18,971 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:51:18] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 22:51:22,764 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:51:22] "[32mPOST /alterar_status_evento/3 HTTP/1.1[0m" 302 -
+2025-01-29 22:51:22,769 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:51:22] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 22:51:24,547 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:51:24] "[32mPOST /alterar_status_evento/3 HTTP/1.1[0m" 302 -
+2025-01-29 22:51:24,553 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:51:24] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 22:52:54,201 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:52:54] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 22:53:00,735 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:53:00] "[32mPOST /alterar_status_evento/3 HTTP/1.1[0m" 302 -
+2025-01-29 22:53:00,740 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:53:00] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 22:53:12,314 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:53:12] "GET /adicionar_participantes/3 HTTP/1.1" 200 -
+2025-01-29 22:53:18,012 - routes - INFO - Fetched 1 utilizadores from the database
+2025-01-29 22:53:18,012 - routes - INFO - User: Fernando Nuno C. B. Vieira, Email: f.nuno.ss@gmail.com
+2025-01-29 22:53:18,017 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:53:18] "GET /utilizadores HTTP/1.1" 200 -
+2025-01-29 22:53:19,520 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:53:19] "GET /adicionar_utilizador HTTP/1.1" 200 -
+2025-01-29 22:53:41,301 - routes - INFO - New user added: Ana Rita C. B. Vieira
+2025-01-29 22:53:41,303 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:53:41] "[32mPOST /adicionar_utilizador HTTP/1.1[0m" 302 -
+2025-01-29 22:53:41,306 - routes - INFO - Fetched 2 utilizadores from the database
+2025-01-29 22:53:41,306 - routes - INFO - User: Fernando Nuno C. B. Vieira, Email: f.nuno.ss@gmail.com
+2025-01-29 22:53:41,306 - routes - INFO - User: Ana Rita C. B. Vieira, Email: anaritav25@gmail.com
+2025-01-29 22:53:41,307 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:53:41] "GET /utilizadores HTTP/1.1" 200 -
+2025-01-29 22:53:45,350 - routes - INFO - Fetched 1 eventos from the database
+2025-01-29 22:53:45,350 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 22:53:45,357 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:53:45] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 22:53:46,913 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:53:46] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 22:53:48,999 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:53:48] "GET /adicionar_participantes/3 HTTP/1.1" 200 -
+2025-01-29 22:53:55,356 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:53:55] "[32mPOST /adicionar_participantes/3 HTTP/1.1[0m" 302 -
+2025-01-29 22:53:55,360 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:53:55] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 22:54:02,364 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:54:02] "[32mPOST /alterar_status_evento/3 HTTP/1.1[0m" 302 -
+2025-01-29 22:54:02,370 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:54:02] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 22:54:03,636 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:54:03] "[32mPOST /alterar_status_evento/3 HTTP/1.1[0m" 302 -
+2025-01-29 22:54:03,640 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:54:03] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 22:54:04,877 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:54:04] "[32mPOST /alterar_status_evento/3 HTTP/1.1[0m" 302 -
+2025-01-29 22:54:04,883 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:54:04] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 22:54:07,082 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:54:07] "[32mPOST /alterar_status_participante/1 HTTP/1.1[0m" 302 -
+2025-01-29 22:54:07,088 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:54:07] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 22:54:11,022 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:54:11] "[32mPOST /alterar_status_evento/3 HTTP/1.1[0m" 302 -
+2025-01-29 22:54:11,026 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:54:11] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 22:54:13,386 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:54:13] "[32mPOST /alterar_status_participante/2 HTTP/1.1[0m" 302 -
+2025-01-29 22:54:13,391 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:54:13] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 22:54:17,737 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:54:17] "[32mPOST /alterar_status_participante/1 HTTP/1.1[0m" 302 -
+2025-01-29 22:54:17,742 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:54:17] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 22:54:21,521 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:54:21] "[32mPOST /alterar_status_participante/2 HTTP/1.1[0m" 302 -
+2025-01-29 22:54:21,525 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:54:21] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 22:54:27,865 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:54:27] "[32mPOST /alterar_status_participante/2 HTTP/1.1[0m" 302 -
+2025-01-29 22:54:27,872 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:54:27] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 22:54:34,181 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:54:34] "[32mPOST /alterar_status_evento/3 HTTP/1.1[0m" 302 -
+2025-01-29 22:54:34,187 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:54:34] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 22:54:44,344 - routes - INFO - Fetched 1 eventos from the database
+2025-01-29 22:54:44,345 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 22:54:44,345 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:54:44] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 22:54:51,546 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:54:51] "GET /detalhe_evento/3 HTTP/1.1" 200 -
+2025-01-29 22:55:00,881 - routes - INFO - Fetched 2 utilizadores from the database
+2025-01-29 22:55:00,882 - routes - INFO - User: Fernando Nuno C. B. Vieira, Email: f.nuno.ss@gmail.com
+2025-01-29 22:55:00,882 - routes - INFO - User: Ana Rita C. B. Vieira, Email: anaritav25@gmail.com
+2025-01-29 22:55:00,882 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:55:00] "GET /utilizadores HTTP/1.1" 200 -
+2025-01-29 22:55:09,027 - routes - INFO - Fetched 1 eventos from the database
+2025-01-29 22:55:09,027 - routes - INFO - Event: Mentoria Criativa, Date: 2025-02-04, Duration: 30
+2025-01-29 22:55:09,028 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:55:09] "GET /eventos HTTP/1.1" 200 -
+2025-01-29 22:55:11,530 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:55:11] "GET /criar_certificado/3 HTTP/1.1" 200 -
+2025-01-29 22:55:31,134 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:55:31] "[33mPOST /criar_certificado/3 HTTP/1.1[0m" 404 -
+2025-01-29 22:55:48,902 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:55:48] "POST /criar_certificado/3 HTTP/1.1" 200 -
+2025-01-29 22:56:22,923 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:56:22] "[33mGET /criar_certificado/1 HTTP/1.1[0m" 404 -
+2025-01-29 22:56:29,372 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:56:29] "GET /criar_certificado/3 HTTP/1.1" 200 -
+2025-01-29 22:56:33,237 - werkzeug - INFO - 127.0.0.1 - - [29/Jan/2025 22:56:33] "GET /criar_certificado/3 HTTP/1.1" 200 -
+2025-01-29 23:00:44,376 - werkzeug - INFO -  * Detected change in '/Users/f.nuno/IronHack/AI_Engineering_Bootcamp/event_manager/event_manager/models.py', reloading
+2025-01-29 23:00:44,818 - werkzeug - INFO -  * Restarting with stat
+2025-01-29 23:00:46,317 - __main__ - ERROR - Error creating database tables: (sqlite3.OperationalError) no such column: evento.formadora
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT evento.id AS evento_id, evento.nome AS evento_nome, evento.data AS evento_data, evento.duracao AS evento_duracao, evento.formadora AS evento_formadora 
+FROM evento) AS anon_1]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-01-29 23:00:46,317 - __main__ - ERROR - Failed to start application: Working outside of application context.
+
+This typically means that you attempted to use functionality that needed
+the current application. To solve this, set up an application context
+with app.app_context(). See the documentation for more information.

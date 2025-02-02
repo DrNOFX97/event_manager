@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block title %}Adicionar Utilizador{% endblock %}
+
+{% block additional_head %}
+<style>
+    .adicionar-utilizador-container {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: var(--background-light);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+    }
+    .adicionar-utilizador-header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .adicionar-utilizador-form {
+        display: flex;
+        flex-direction: column;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        color: var(--text-dark);
+        font-weight: bold;
+    }
+    .form-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid var(--text-light);
+        border-radius: var(--border-radius);
+    }
+    .btn-submit {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .btn-submit:hover {
+        background-color: var(--secondary-color);
+    }
+    .btn-cancel {
+        background-color: var(--text-light);
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: var(--border-radius);
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 10px;
+        text-align: center;
+    }
+    .form-actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="adicionar-utilizador-container">
+    <div class="adicionar-utilizador-header">
+        <h1>Adicionar Utilizador</h1>
+    </div>
+
+    <form method="POST" class="adicionar-utilizador-form">
+        <div class="form-group">
+            <label for="nome_completo">Nome Completo</label>
+            <input type="text" id="nome_completo" name="nome_completo" required placeholder="Digite o nome completo do utilizador">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="Digite o email do utilizador">
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn-submit">Adicionar Utilizador</button>
+            <a href="{{ url_for('main.utilizadores') }}" class="btn-cancel">Cancelar</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

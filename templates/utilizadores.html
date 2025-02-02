@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}Utilizadores{% endblock %}
+
+{% block additional_head %}
+<style>
+    .utilizadores-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .utilizadores-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .utilizadores-list {
+        background-color: var(--background-light);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+    }
+    .utilizador-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        border-bottom: 1px solid var(--text-light);
+    }
+    .utilizador-item:last-child {
+        border-bottom: none;
+    }
+    .utilizador-details {
+        flex-grow: 1;
+    }
+    .utilizador-actions {
+        display: flex;
+        gap: 10px;
+    }
+    .btn {
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: var(--border-radius);
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+    .btn-edit {
+        background-color: var(--secondary-color);
+        color: var(--text-dark);
+    }
+    .btn-delete {
+        background-color: #e74c3c;
+        color: white;
+    }
+    .btn:hover {
+        opacity: 0.8;
+    }
+    .criar-utilizador-btn {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 10px 20px;
+        border-radius: var(--border-radius);
+        text-decoration: none;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="utilizadores-container">
+    <div class="utilizadores-header">
+        <h1>Utilizadores</h1>
+        <a href="{{ url_for('main.adicionar_utilizador') }}" class="criar-utilizador-btn">Adicionar Utilizador</a>
+    </div>
+
+    <div class="utilizadores-list">
+        {% for utilizador in utilizadores %}
+        <div class="utilizador-item">
+            <div class="utilizador-details">
+                <strong>{{ utilizador.nome_completo }}</strong>
+                <p>{{ utilizador.email }}</p>
+            </div>
+            <div class="utilizador-actions">
+                <a href="{{ url_for('main.editar_utilizador', id=utilizador.id) }}" class="btn btn-edit">Editar</a>
+                <form method="POST" action="{{ url_for('main.apagar_utilizador', id=utilizador.id) }}" style="display:inline;">
+                    <button type="submit" class="btn btn-delete" onclick="return confirm('Tem certeza que deseja apagar este utilizador?')">Apagar</button>
+                </form>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
