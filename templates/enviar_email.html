@@ -55,6 +55,6 @@ def enviar_certificado_email(participante_id):
 # Exemplo de uso
 assunto = "Bem-vindo à nossa lista de mailing!"
 corpo = "Obrigado por se registar. Em breve receberá mais informações."
-email_origem = "anaritamindset@gmail.com"
-senha_origem = "avuo ixfg ogvt goqa"
+email_origem = os.environ.get('EMAIL_USER') # Email do remetente
+senha_origem = os.environ.get('EMAIL_PASSWORD') # Senha do email (16 caracteres, NÃO É A PASSWORD DO GMAIL"
 enviar_email(assunto, corpo, email_origem, senha_origem, [])
